@@ -158,8 +158,8 @@ a:hover { color: var(--accent-2); }
 }
 
 .carousel .slide {
-  flex: 0 0 auto;              /* evita que se estiren */
-  scroll-snap-align: start;
+  position: relative;
+  overflow: visible;     /* permite que la imagen "se salga" al hacer zoom */
 }
 
 .carousel img {
@@ -172,7 +172,11 @@ a:hover { color: var(--accent-2); }
 }
 .carousel img,
 .gallery-grid img {
+  display: block;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center center;
+  backface-visibility: hidden;
+  will-change: transform;
   cursor: pointer;
 }
 
@@ -180,6 +184,14 @@ a:hover { color: var(--accent-2); }
 .gallery-grid img:hover {
   transform: scale(1.08); /* se hace más grande */
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.carousel .slide:hover img,
+.gallery-grid img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.carousel .slide:hover {
+  z-index: 5;
 }
 
 .gallery-grid {
