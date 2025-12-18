@@ -157,11 +157,13 @@ a:hover { color: var(--accent-2); }
 }
 .carousel .slide { flex: 0 0 auto; scroll-snap-align: start; }
 .carousel img {
-  width: 220px;
-  height: auto;
+  width: 220px;          /* ancho fijo */
+  height: 300px;         /* alto fijo */
+  object-fit: cover;     /* recorta y ajusta manteniendo proporción */
   border-radius: 8px;
   border: 1px solid #26263a;
 }
+
 
 /* Contact */
 .contact p { color: var(--muted); }
