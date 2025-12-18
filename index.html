@@ -78,53 +78,45 @@
       <h2>Gallery</h2>
 
       <!-- Portraits Carousel -->
-      <div id="portraits" class="carousel-block">
-        <div class="carousel-head">
-          <h3>Pencil portraits</h3>
-          <div class="controls">
-            <button class="prev" data-target="portraits" aria-label="Previous portrait">‹</button>
-            <button class="next" data-target="portraits" aria-label="Next portrait">›</button>
-          </div>
-        </div>
-        <div class="carousel" data-name="portraits">
+    <div id="portraits" class="carousel-block">
+      <div class="carousel-head">
+        <h3>Pencil portraits</h3>
+        <div class="controls">
+          <button class="prev" data-target="portraits" aria-label="Previous portrait">‹</button>
+          <button class="next" data-target="portraits" aria-label="Next portrait">›</button>
         </div>
       </div>
-
-      <!-- Anime Carousel -->
-      <div id="anime" class="carousel-block">
-        <div class="carousel-head">
-          <h3>Anime</h3>
-          <div class="controls">
-            <button class="prev" data-target="anime" aria-label="Previous anime">‹</button>
-            <button class="next" data-target="anime" aria-label="Next anime">›</button>
-          </div>
-        </div>
-        <div class="carousel" data-name="anime">
-          <div class="slide"><img src="assets/anime/anime-1.jpg" alt="Anime 1" /></div>
-          <div class="slide"><img src="assets/anime/anime-2.jpg" alt="Anime 2" /></div>
-          <div class="slide"><img src="assets/anime/anime-3.jpg" alt="Anime 3" /></div>
-          <div class="slide"><img src="assets/anime/anime-4.jpg" alt="Anime 4" /></div>
-        </div>
-      </div>
-
-      <!-- Mixed Carousel -->
-      <div id="mixed" class="carousel-block">
-        <div class="carousel-head">
-          <h3>Mixed works</h3>
-          <div class="controls">
-            <button class="prev" data-target="mixed" aria-label="Previous mixed">‹</button>
-            <button class="next" data-target="mixed" aria-label="Next mixed">›</button>
-          </div>
-        </div>
-        <div class="carousel" data-name="mixed">
-          <div class="slide"><img src="assets/mixed/mixed-1.jpg" alt="Mixed 1" /></div>
-          <div class="slide"><img src="assets/mixed/mixed-2.jpg" alt="Mixed 2" /></div>
-          <div class="slide"><img src="assets/mixed/mixed-3.jpg" alt="Mixed 3" /></div>
-          <div class="slide"><img src="assets/mixed/mixed-4.jpg" alt="Mixed 4" /></div>
-        </div>
-      </div>
+      <!-- Contenedor vacío: el JS lo llenará -->
+      <div class="carousel" data-name="portraits"></div>
     </div>
-  </section>
+
+    <!-- Anime Carousel -->
+    <div id="anime" class="carousel-block">
+      <div class="carousel-head">
+        <h3>Anime</h3>
+        <div class="controls">
+          <button class="prev" data-target="anime" aria-label="Previous anime">‹</button>
+          <button class="next" data-target="anime" aria-label="Next anime">›</button>
+        </div>
+      </div>
+      <!-- Contenedor vacío -->
+      <div class="carousel" data-name="anime"></div>
+    </div>
+
+    <!-- Mixed Carousel -->
+    <div id="mixed" class="carousel-block">
+      <div class="carousel-head">
+        <h3>Mixed works</h3>
+        <div class="controls">
+          <button class="prev" data-target="mixed" aria-label="Previous mixed">‹</button>
+          <button class="next" data-target="mixed" aria-label="Next mixed">›</button>
+        </div>
+      </div>
+      <!-- Contenedor vacío -->
+      <div class="carousel" data-name="mixed"></div>
+    </div>
+  </div>
+</section>
 
   <!-- Contact -->
   <section id="contact" class="contact section">
