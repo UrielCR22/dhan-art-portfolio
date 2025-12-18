@@ -138,8 +138,8 @@ a:hover { color: var(--accent-2); }
   align-items: center; /* centra la imagen verticalmente */
 }
 .about-image img {
-  width: 100%;   /* ocupa todo el ancho disponible */
-  height: 100%;  /* ocupa toda la altura del contenedor */
+  width: 90%;   /* ocupa todo el ancho disponible */
+  height: 90%;  /* ocupa toda la altura del contenedor */
   object-fit: cover; /* recorta proporcionalmente para llenar el espacio */
   border-radius: 8px;
 }
