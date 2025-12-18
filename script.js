@@ -10,6 +10,33 @@ if (navToggle) {
 // Year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// ===============================
+// Configuración de imágenes por sección
+const galleries = {
+  portraits: ["portrait-1.jpg", "portrait-2.jpg", "portrait-3.jpg"],
+  anime: ["anime-1.jpg", "anime-2.jpg", "anime-3.jpg"],
+  mixed: ["mixed-1.jpg", "mixed-2.jpg", "mixed-3.jpg"]
+};
+
+function buildCarousel(name) {
+  const container = document.querySelector(`.carousel[data-name="${name}"]`);
+  if (!container) return;
+
+  galleries[name].forEach(file => {
+    const slide = document.createElement("div");
+    slide.className = "slide";
+    const img = document.createElement("img");
+    img.src = `assets/${name}/${file}`;
+    img.alt = `${name} artwork`;
+    slide.appendChild(img);
+    container.appendChild(slide);
+  });
+}
+
+// Construir todos los carruseles
+["portraits", "anime", "mixed"].forEach(buildCarousel);
+
+// ===============================
 // Carousel scroll buttons
 function initCarousel(name) {
   const container = document.querySelector(`.carousel[data-name="${name}"]`);
@@ -27,8 +54,9 @@ function initCarousel(name) {
     });
   });
 }
-['portraits', 'anime', 'mixed'].forEach(initCarousel);
+["portraits", "anime", "mixed"].forEach(initCarousel);
 
+// ===============================
 // Smooth scrolling for anchors
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
@@ -41,6 +69,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
+// ===============================
 // Stable submenu behavior (desktop + mobile)
 document.querySelectorAll('.has-submenu').forEach(item => {
   let hoverTimer;
@@ -64,4 +93,5 @@ document.querySelectorAll('.has-submenu').forEach(item => {
     }
   });
 });
+
 
