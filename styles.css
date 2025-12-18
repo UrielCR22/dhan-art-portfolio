@@ -14,7 +14,7 @@ html, body {
   padding: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans";
   line-height: 1.6;
 }
 
@@ -97,7 +97,7 @@ a:hover { color: var(--accent-2); }
 
 .has-submenu .submenu {
   position: absolute;
-  top: 40px;
+  top: 100%;       /* justo debajo del padre */
   left: 0;
   background: var(--panel);
   border: 1px solid #252535;
@@ -105,9 +105,11 @@ a:hover { color: var(--accent-2); }
   border-radius: 8px;
   display: none;
   min-width: 160px;
+  z-index: 999;    /* asegura que quede encima */
 }
 
-.has-submenu:hover .submenu {
+.has-submenu:hover .submenu,
+.has-submenu:focus-within .submenu {
   display: block;
 }
 
@@ -229,26 +231,26 @@ a:hover { color: var(--accent-2); }
   background: #2a2a39;
 }
 
+/* Carrusel horizontal */
 .carousel {
-  display: flex;              /* coloca las imágenes en fila */
-  overflow-x: auto;           /* permite desplazamiento horizontal */
+  display: flex;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
-  gap: 12px;                  /* espacio entre imágenes */
+  gap: 12px;
   padding-bottom: 10px;
 }
 
 .carousel .slide {
-  flex: 0 0 auto;             /* evita que se estiren */
+  flex: 0 0 auto;
   scroll-snap-align: start;
 }
 
 .carousel img {
-  width: 220px;               /* tamaño más pequeño */
+  width: 220px;   /* tamaño más pequeño */
   height: auto;
   border-radius: 8px;
   border: 1px solid #26263a;
 }
-
 
 /* Contact */
 .contact p { color: var(--muted); }
@@ -276,3 +278,4 @@ a:hover { color: var(--accent-2); }
   .site-nav ul { flex-direction: column; gap: 8px; margin-top: 12px; }
   .has-submenu:hover .submenu { position: static; display: block; }
 }
+
