@@ -149,19 +149,26 @@ a:hover { color: var(--accent-2); }
 
 /* Carrusel horizontal */
 .carousel {
-  display: flex;
-  overflow-x: auto;
+  display: flex;               /* coloca las imágenes en fila */
+  overflow-x: auto;            /* scroll horizontal */
+  gap: 12px;                   /* espacio entre imágenes */
   scroll-snap-type: x mandatory;
-  gap: 12px;
-  padding-bottom: 10px;
+  align-items: center;         /* centra verticalmente */
+  padding: 10px 0;
 }
-.carousel .slide { flex: 0 0 auto; scroll-snap-align: start; }
+
+.carousel .slide {
+  flex: 0 0 auto;              /* evita que se estiren */
+  scroll-snap-align: start;
+}
+
 .carousel img {
-  width: 220px;          /* ancho fijo */
-  height: 300px;         /* alto fijo */
-  object-fit: cover;     /* recorta y ajusta manteniendo proporción */
+  width: 220px;                /* ancho fijo */
+  height: 300px;               /* alto fijo */
+  object-fit: cover;           /* recorta proporcionalmente */
   border-radius: 8px;
   border: 1px solid #26263a;
+  display: block;
 }
 
 
