@@ -8,7 +8,8 @@ if (navToggle) {
 }
 
 // Year in footer
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ===============================
 // Configuración de imágenes por sección
@@ -20,7 +21,7 @@ const galleries = {
 
 function buildCarousel(name) {
   const container = document.querySelector(`.carousel[data-name="${name}"]`);
-  if (!container) return;
+  if (!container || !galleries[name]) return;
 
   galleries[name].forEach(file => {
     const slide = document.createElement("div");
@@ -93,5 +94,36 @@ document.querySelectorAll('.has-submenu').forEach(item => {
     }
   });
 });
+
+// ===============================
+// Modal de imagen completa
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("modalImg");
+const captionText = document.getElementById("caption");
+const closeBtn = document.querySelector(".close");
+
+// Delegar evento en todas las imágenes (carrusel y grids)
+document.addEventListener("click", function(e) {
+  if (
+    e.target.tagName === "IMG" &&
+    (e.target.closest(".carousel") || e.target.closest(".gallery-grid"))
+  ) {
+    if (!modal || !modalImg) return;
+    modal.style.display = "block";
+    modalImg.src = e.target.src;
+    captionText && (captionText.textContent = e.target.alt || "");
+  }
+});
+
+// Cerrar modal
+if (closeBtn && modal) {
+  closeBtn.onclick = function() {
+    modal.style.display = "none";
+  };
+  modal.onclick = function(e) {
+    if (e.target === modal) modal.style.display = "none";
+  };
+}
+
 
 
