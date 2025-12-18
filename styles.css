@@ -230,22 +230,25 @@ a:hover { color: var(--accent-2); }
 }
 
 .carousel {
-  position: relative;
-  overflow: hidden;
+  display: flex;              /* coloca las imágenes en fila */
+  overflow-x: auto;           /* permite desplazamiento horizontal */
+  scroll-snap-type: x mandatory;
+  gap: 12px;                  /* espacio entre imágenes */
+  padding-bottom: 10px;
 }
 
 .carousel .slide {
-  min-width: 100%;
-  transition: transform 0.5s ease;
+  flex: 0 0 auto;             /* evita que se estiren */
+  scroll-snap-align: start;
 }
 
 .carousel img {
-  display: block;
-  width: 100%;
+  width: 220px;               /* tamaño más pequeño */
   height: auto;
-  border-radius: 10px;
+  border-radius: 8px;
   border: 1px solid #26263a;
 }
+
 
 /* Contact */
 .contact p { color: var(--muted); }
