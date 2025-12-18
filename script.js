@@ -1,4 +1,4 @@
-// Navigation toggle
+// Toggle nav on mobile
 const navToggle = document.querySelector('.nav-toggle');
 const siteNav = document.querySelector('.site-nav');
 if (navToggle) {
@@ -10,7 +10,7 @@ if (navToggle) {
 // Year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Simple carousel logic
+// Carousel scroll buttons
 function initCarousel(name) {
   const container = document.querySelector(`.carousel[data-name="${name}"]`);
   if (!container) return;
@@ -27,12 +27,9 @@ function initCarousel(name) {
     });
   });
 }
-
-
-// Initialize carousels
 ['portraits', 'anime', 'mixed'].forEach(initCarousel);
 
-// Smooth scrolling for anchor links
+// Smooth scrolling for anchors
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const targetId = a.getAttribute('href').slice(1);
@@ -43,3 +40,28 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     }
   });
 });
+
+// Stable submenu behavior (desktop + mobile)
+document.querySelectorAll('.has-submenu').forEach(item => {
+  let hoverTimer;
+
+  // Desktop: keep open while hovering parent or submenu
+  item.addEventListener('mouseenter', () => {
+    clearTimeout(hoverTimer);
+    item.classList.add('open');
+  });
+  item.addEventListener('mouseleave', () => {
+    hoverTimer = setTimeout(() => item.classList.remove('open'), 80);
+  });
+
+  // Mobile: toggle on click of the parent link
+  const link = item.querySelector(':scope > a');
+  link?.addEventListener('click', (e) => {
+    const isMobileNav = siteNav.classList.contains('open');
+    if (isMobileNav) {
+      e.preventDefault();
+      item.classList.toggle('open');
+    }
+  });
+});
+
