@@ -125,7 +125,7 @@ a:hover { color: var(--accent-2); }
   gap: 24px;
   align-items: stretch; /* hace que ambos bloques tengan la misma altura */
 }
-.about-text p { margin-bottom: 12px; }
+/* .about-text p { margin-bottom: 12px; } */
 .about-text {
   flex: 1; /* ocupa el mismo espacio que la imagen */
   text-align: justify; /* justifica el texto */
