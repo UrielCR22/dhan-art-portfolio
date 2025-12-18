@@ -14,30 +14,20 @@ document.getElementById('year').textContent = new Date().getFullYear();
 function initCarousel(name) {
   const container = document.querySelector(`.carousel[data-name="${name}"]`);
   if (!container) return;
-  const slides = Array.from(container.querySelectorAll('.slide'));
-  let index = 0;
-
-  function update() {
-    const offset = -index * 100;
-    slides.forEach(s => { s.style.transform = `translateX(${offset}%)`; });
-  }
 
   document.querySelectorAll(`.controls .prev[data-target="${name}"]`).forEach(btn => {
     btn.addEventListener('click', () => {
-      index = (index - 1 + slides.length) % slides.length;
-      update();
+      container.scrollBy({ left: -240, behavior: 'smooth' });
     });
   });
 
   document.querySelectorAll(`.controls .next[data-target="${name}"]`).forEach(btn => {
     btn.addEventListener('click', () => {
-      index = (index + 1) % slides.length;
-      update();
+      container.scrollBy({ left: 240, behavior: 'smooth' });
     });
   });
-
-  update();
 }
+
 
 // Initialize carousels
 ['portraits', 'anime', 'mixed'].forEach(initCarousel);
