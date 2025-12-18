@@ -127,7 +127,7 @@ a:hover { color: var(--accent-2); }
 }
 /* .about-text p { margin-bottom: 12px; } */
 .about-text {
-  flex: 1; /* ocupa el mismo espacio que la imagen */
+  flex: 2; /* ocupa el mismo espacio que la imagen */
   text-align: justify; /* justifica el texto */
 }
 .about-facts { list-style: none; padding: 0; margin: 10px 0 0; }
@@ -138,8 +138,8 @@ a:hover { color: var(--accent-2); }
   align-items: center; /* centra la imagen verticalmente */
 }
 .about-image img {
-  width: 90%;   /* ocupa todo el ancho disponible */
-  height: 90%;  /* ocupa toda la altura del contenedor */
+  width: 100%;   /* ocupa todo el ancho disponible */
+  height: 100%;  /* ocupa toda la altura del contenedor */
   object-fit: cover; /* recorta proporcionalmente para llenar el espacio */
   border-radius: 8px;
 }
