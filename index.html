@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uriel Art Portfolio</title>
+  <meta name="description" content="Pencil portraits, anime art, and mixed works by Uriel." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="branding">
+      <a href="#home" class="logo">Uriel</a>
+      <span class="tagline">Art Portfolio</span>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li class="has-submenu">
+          <a href="#gallery">Gallery</a>
+          <ul class="submenu">
+            <li><a href="#portraits">Portraits</a></li>
+            <li><a href="#anime">Anime</a></li>
+            <li><a href="#mixed">Mixed</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Pencil Portraits, Anime & Mixed Art</h1>
+      <p>Realistic expressions, stylized energy, and explorations across mediums — curated by Uriel.</p>
+      <a href="#gallery" class="cta">View Gallery</a>
+    </div>
+    <div class="hero-overlay"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about section">
+    <div class="container">
+      <h2>About me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I’m Uriel, a multidisciplinary artist focused on pencil portraits, anime-inspired illustrations, and mixed media.
+            My work blends precision with emotion — aiming to capture character, movement, and texture.
+          </p>
+          <p>
+            I currently reside in Dubai and collaborate globally. I welcome commissions, exhibitions, and creative partnerships.
+          </p>
+          <ul class="about-facts">
+            <li><strong>Mediums:</strong> Pencil, ink, markers, digital touch-ups</li>
+            <li><strong>Focus:</strong> Portraits, anime, experimental compositions</li>
+            <li><strong>Available for:</strong> Commissions, prints, collaborations</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="assets/portraits/sample-portrait.jpg" alt="Sample pencil portrait by Uriel" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="gallery section">
+    <div class="container">
+      <h2>Gallery</h2>
+
+      <!-- Portraits Carousel -->
+      <div id="portraits" class="carousel-block">
+        <div class="carousel-head">
+          <h3>Pencil portraits</h3>
+          <div class="controls">
+            <button class="prev" data-target="portraits" aria-label="Previous portrait">‹</button>
+            <button class="next" data-target="portraits" aria-label="Next portrait">›</button>
+          </div>
+        </div>
+        <div class="carousel" data-name="portraits">
+          <div class="slide"><img src="assets/portraits/portrait-1.jpg" alt="Portrait 1" /></div>
+          <div class="slide"><img src="assets/portraits/portrait-2.jpg" alt="Portrait 2" /></div>
+          <div class="slide"><img src="assets/portraits/portrait-3.jpg" alt="Portrait 3" /></div>
+          <div class="slide"><img src="assets/portraits/portrait-4.jpg" alt="Portrait 4" /></div>
+        </div>
+      </div>
+
+      <!-- Anime Carousel -->
+      <div id="anime" class="carousel-block">
+        <div class="carousel-head">
+          <h3>Anime</h3>
+          <div class="controls">
+            <button class="prev" data-target="anime" aria-label="Previous anime">‹</button>
+            <button class="next" data-target="anime" aria-label="Next anime">›</button>
+          </div>
+        </div>
+        <div class="carousel" data-name="anime">
+          <div class="slide"><img src="assets/anime/anime-1.jpg" alt="Anime 1" /></div>
+          <div class="slide"><img src="assets/anime/anime-2.jpg" alt="Anime 2" /></div>
+          <div class="slide"><img src="assets/anime/anime-3.jpg" alt="Anime 3" /></div>
+          <div class="slide"><img src="assets/anime/anime-4.jpg" alt="Anime 4" /></div>
+        </div>
+      </div>
+
+      <!-- Mixed Carousel -->
+      <div id="mixed" class="carousel-block">
+        <div class="carousel-head">
+          <h3>Mixed works</h3>
+          <div class="controls">
+            <button class="prev" data-target="mixed" aria-label="Previous mixed">‹</button>
+            <button class="next" data-target="mixed" aria-label="Next mixed">›</button>
+          </div>
+        </div>
+        <div class="carousel" data-name="mixed">
+          <div class="slide"><img src="assets/mixed/mixed-1.jpg" alt="Mixed 1" /></div>
+          <div class="slide"><img src="assets/mixed/mixed-2.jpg" alt="Mixed 2" /></div>
+          <div class="slide"><img src="assets/mixed/mixed-3.jpg" alt="Mixed 3" /></div>
+          <div class="slide"><img src="assets/mixed/mixed-4.jpg" alt="Mixed 4" /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>For commissions, prints, or collaborations, feel free to reach out.</p>
+      <ul class="contact-list">
+        <li><strong>Email:</strong> your.email@example.com</li>
+        <li><strong>Instagram:</strong> @yourhandle</li>
+        <li><strong>Location:</strong> Dubai, UAE</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Uriel — Art Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
