@@ -232,9 +232,13 @@ a:hover { color: var(--accent-2); }
 }
 
 .modal-content {
-  height: 95vh;
-  width: auto;
+  margin: auto;
+  display: block;
+  max-width: 97%;   /* más ancho */
+  max-height: 97vh; /* más alto, casi toda la pantalla */
+  border-radius: 8px;
 }
+
 
 
 
