@@ -170,6 +170,18 @@ a:hover { color: var(--accent-2); }
   border: 1px solid #26263a;
   display: block;
 }
+.carousel img,
+.gallery-grid img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.carousel img:hover,
+.gallery-grid img:hover {
+  transform: scale(1.08); /* se hace más grande */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
