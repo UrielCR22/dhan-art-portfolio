@@ -139,10 +139,9 @@ a:hover { color: var(--accent-2); }
 }
 .about-image img {
   width: 100%;
-  height: auto;       /* la altura se ajusta automáticamente */
-  object-fit: contain; /* muestra toda la imagen */
+  height: 100%;       /* ocupa toda la altura del contenedor */
+  object-fit: cover;  /* recorta proporcionalmente */
 }
-
 
 /* Gallery */
 .gallery h2 { margin-bottom: 16px; }
