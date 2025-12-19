@@ -317,29 +317,59 @@ a:hover { color: var(--accent-2); }
   /* NAV — menú móvil */
   .nav-toggle { display: inline-block; }
 
-  .site-nav { display: none; }
+  .site-nav {
+    display: none;
+    width: 100%;
+    background: var(--panel);
+    padding: 12px 0;
+    border-top: 1px solid #232335;
+  }
+
   .site-nav.open { display: block; }
 
   .site-nav ul {
     flex-direction: column;
-    gap: 8px;
-    margin-top: 12px;
+    gap: 6px;
+    padding: 0 16px;
+  }
+
+  .site-nav a {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
   }
 
   /* SUBMENÚ en móvil */
-  .has-submenu { position: static; }
+  .has-submenu {
+    width: 100%;
+    position: static;
+  }
+
+  .has-submenu > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .has-submenu .submenu {
     position: static;
     display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding-left: 16px;
     margin-top: 6px;
+    border-left: 2px solid var(--accent);
+    border-radius: 0;
+    background: transparent;
     box-shadow: none;
-    border: 1px solid #232335;
   }
 
-  .has-submenu.open .submenu { display: block; }
+  .has-submenu.open .submenu {
+    display: flex;
+  }
+
+  .submenu a {
+    padding: 8px 0;
+    background: none;
+  }
 }
-
-
-
-
