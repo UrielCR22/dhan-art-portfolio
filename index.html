@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Uriel Art Portfolio</title>
-  <meta name="description" content="Pencil portraits, anime art, and mixed works by Uriel." />
+  <title>Dhan Ella Art Portfolio</title>
+  <meta name="description" content="Pencil portraits, anime art, and mixed works by Dhan Ella" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
@@ -13,7 +13,7 @@
   <!-- Header / Navigation -->
   <header class="site-header">
     <div class="branding">
-      <a href="#home" class="logo">Uriel</a>
+      <a href="#home" class="logo">Dhan Ella</a>
       <span class="tagline">Art Portfolio</span>
     </div>
     <button class="nav-toggle" aria-label="Toggle menu">
@@ -26,21 +26,23 @@
         <li class="has-submenu">
           <a href="#gallery">Gallery</a>
           <ul class="submenu">
-            <li><a href="#portraits">Portraits</a></li>
-            <li><a href="#anime">Anime</a></li>
-            <li><a href="#mixed">Mixed</a></li>
+            <li><a href="portraits.html">Portraits</a></li>
+            <li><a href="anime.html">Anime</a></li>
+            <li><a href="mixed.html">Mixed</a></li>
           </ul>
         </li>
+
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
+
   </header>
 
   <!-- Hero -->
   <section id="home" class="hero">
     <div class="hero-content">
       <h1>Pencil Portraits, Anime & Mixed Art</h1>
-      <p>Realistic expressions, stylized energy, and explorations across mediums — curated by Uriel.</p>
+      <p>Realistic expressions, stylized energy, and explorations across mediums — curated by Ella.</p>
       <a href="#gallery" class="cta">View Gallery</a>
     </div>
     <div class="hero-overlay"></div>
@@ -53,20 +55,22 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I’m Uriel, a multidisciplinary artist focused on pencil portraits, anime-inspired illustrations, and mixed media.
-            My work blends precision with emotion — aiming to capture character, movement, and texture.
+            Hi, I’m Ella, a 26-year-old Filipino artist currently based in Dubai. 
+            I specialize in realistic pencil portraits, focusing on capturing emotions, expressions, and the unique details that make every face special. 
+            I also create other styles of art, including anime, animals, and creative illustrations.
           </p>
           <p>
-            I currently reside in Dubai and collaborate globally. I welcome commissions, exhibitions, and creative partnerships.
+            Art is my passion and my way of making people happy by turning their stories and faces into meaningful pieces. 
+            I’m open for commissions and invite you to explore my work — I would love to create something special just for you 🤍
           </p>
           <ul class="about-facts">
-            <li><strong>Mediums:</strong> Pencil, ink, markers, digital touch-ups</li>
+            <li><strong>Mediums:</strong> Pencil</li>
             <li><strong>Focus:</strong> Portraits, anime, experimental compositions</li>
-            <li><strong>Available for:</strong> Commissions, prints, collaborations</li>
+            <li><strong>Available for:</strong> Commissions</li>
           </ul>
         </div>
         <div class="about-image">
-          <img src="assets/portraits/sample-portrait.jpg" alt="Sample pencil portrait by Uriel" />
+          <img src="assets/portraits/Ella-1.jpg" alt="This is me!" />
         </div>
       </div>
     </div>
@@ -82,18 +86,16 @@
         <div class="carousel-head">
           <h3>Pencil portraits</h3>
           <div class="controls">
-            <button class="prev" data-target="portraits" aria-label="Previous portrait">‹</button>
-            <button class="next" data-target="portraits" aria-label="Next portrait">›</button>
+            <button class="prev" data-target="portraits">‹</button>
+            <button class="next" data-target="portraits">›</button>
+            <!-- Icono para abrir página completa -->
+            <a href="portraits.html" class="open-full" title="Open full gallery">🔍</a>
           </div>
         </div>
-        <div class="carousel" data-name="portraits">
-          <div class="slide"><img src="assets/portraits/portrait-1.jpg" alt="Portrait 1" /></div>
-          <div class="slide"><img src="assets/portraits/portrait-2.jpg" alt="Portrait 2" /></div>
-          <div class="slide"><img src="assets/portraits/portrait-3.jpg" alt="Portrait 3" /></div>
-          <div class="slide"><img src="assets/portraits/portrait-4.jpg" alt="Portrait 4" /></div>
-        </div>
+        <div class="carousel" data-name="portraits"></div>
       </div>
 
+  
       <!-- Anime Carousel -->
       <div id="anime" class="carousel-block">
         <div class="carousel-head">
@@ -101,16 +103,14 @@
           <div class="controls">
             <button class="prev" data-target="anime" aria-label="Previous anime">‹</button>
             <button class="next" data-target="anime" aria-label="Next anime">›</button>
+            <!-- Icono para abrir página completa -->
+            <a href="anime.html" class="open-full" title="Open full gallery">🔍</a> 
           </div>
         </div>
-        <div class="carousel" data-name="anime">
-          <div class="slide"><img src="assets/anime/anime-1.jpg" alt="Anime 1" /></div>
-          <div class="slide"><img src="assets/anime/anime-2.jpg" alt="Anime 2" /></div>
-          <div class="slide"><img src="assets/anime/anime-3.jpg" alt="Anime 3" /></div>
-          <div class="slide"><img src="assets/anime/anime-4.jpg" alt="Anime 4" /></div>
-        </div>
+        <!-- Contenedor vacío -->
+        <div class="carousel" data-name="anime"></div>
       </div>
-
+  
       <!-- Mixed Carousel -->
       <div id="mixed" class="carousel-block">
         <div class="carousel-head">
@@ -118,14 +118,12 @@
           <div class="controls">
             <button class="prev" data-target="mixed" aria-label="Previous mixed">‹</button>
             <button class="next" data-target="mixed" aria-label="Next mixed">›</button>
+            <!-- Icono para abrir página completa -->
+            <a href="mixed.html" class="open-full" title="Open full gallery">🔍</a>
           </div>
         </div>
-        <div class="carousel" data-name="mixed">
-          <div class="slide"><img src="assets/mixed/mixed-1.jpg" alt="Mixed 1" /></div>
-          <div class="slide"><img src="assets/mixed/mixed-2.jpg" alt="Mixed 2" /></div>
-          <div class="slide"><img src="assets/mixed/mixed-3.jpg" alt="Mixed 3" /></div>
-          <div class="slide"><img src="assets/mixed/mixed-4.jpg" alt="Mixed 4" /></div>
-        </div>
+        <!-- Contenedor vacío -->
+        <div class="carousel" data-name="mixed"></div>
       </div>
     </div>
   </section>
@@ -134,10 +132,11 @@
   <section id="contact" class="contact section">
     <div class="container">
       <h2>Contact</h2>
-      <p>For commissions, prints, or collaborations, feel free to reach out.</p>
+      <p>For commissions, feel free to reach out.</p>
       <ul class="contact-list">
-        <li><strong>Email:</strong> your.email@example.com</li>
-        <li><strong>Instagram:</strong> @yourhandle</li>
+        <li><strong>Email:</strong> quintodhanella@gmail.com</li>
+        <li><strong>Instagram:</strong> @_dhan.arts</li>
+        <li><strong>TikTok:</strong> @_dhan.arts</li>
         <li><strong>Location:</strong> Dubai, UAE</li>
       </ul>
     </div>
@@ -146,10 +145,19 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Uriel — Art Portfolio. All rights reserved.</p>
+      <p>© <span id="year"></span> Dhan Ella — Art Portfolio. All rights reserved.</p>
     </div>
   </footer>
 
+  
+  <!-- Modal para imagen completa -->
+  <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg" />
+    <div id="caption"></div>
+  </div>
+
   <script src="script.js"></script>
+
 </body>
 </html>
