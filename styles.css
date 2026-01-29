@@ -193,7 +193,7 @@ a:hover { color: var(--accent-2); }
   height: 300px;
   object-fit: cover;
   border-radius: 8px;
-  border: 1px solid #26263a;
+  border: none;
   display: block;
 }
 
