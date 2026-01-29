@@ -362,9 +362,11 @@ a:hover { color: var(--accent-2); }
   }
 
   .submenu {
-    display: none;
-    background: #1a1a25;
-  }
+  position: static !important;
+  display: none;
+  width: 100%;
+  background: #1a1a25;
+}
 
   .has-submenu.open .submenu {
     display: block;
