@@ -209,7 +209,7 @@ a:hover { color: var(--accent-2); }
 
 .carousel img:hover,
 .gallery-grid img:hover {
-  transform: scale(1.08);
+  transform: scale(1.03);
   box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
