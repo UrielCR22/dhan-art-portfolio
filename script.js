@@ -205,14 +205,18 @@ document.querySelectorAll('.has-submenu').forEach(item => {
   });
 
   // Mobile: toggle on click of the parent link
-  const link = item.querySelector(':scope > a');
-  link?.addEventListener('click', (e) => {
+  item.addEventListener('click', (e) => {
     const isMobileNav = siteNav.classList.contains('open');
-    if (isMobileNav) {
+  
+    if (!isMobileNav) return;
+  
+    // Solo si se tocó el link principal (Gallery)
+    if (e.target.closest(':scope > a')) {
       e.preventDefault();
       item.classList.toggle('open');
     }
   });
+
 });
 
 // ===============================
