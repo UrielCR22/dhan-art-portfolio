@@ -210,7 +210,7 @@ document.querySelectorAll('.has-submenu').forEach(item => {
   
     if (!isMobileNav) return;
   
-    // Solo si se tocó el link principal (Gallery)
+    // Solo si se tocó el link principal (Galleryy)
     if (e.target.closest(':scope > a')) {
       e.preventDefault();
       item.classList.toggle('open');
