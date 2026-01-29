@@ -370,7 +370,7 @@ a:hover { color: var(--accent-2); }
     transform: rotate(180deg);
   }
 
-  /* Submenu */
+  /* Submenuu */
   .submenu {
     position: static !important;
     display: none;
