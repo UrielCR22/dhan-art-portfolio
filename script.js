@@ -178,9 +178,13 @@ function initCarousel(name) {
 ["portraits", "anime", "mixed"].forEach(initCarousel);
 
 // ===============================
-// Smooth scrolling for anchors
+// Smooth scrolling for anchorss
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
+
+    // 🔧 No interceptar clicks dentro del menú
+    if (a.closest('.site-nav')) return;
+
     const targetId = a.getAttribute('href').slice(1);
     const el = document.getElementById(targetId);
     if (el) {
