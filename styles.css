@@ -228,6 +228,12 @@ a:hover { color: var(--accent-2); }
   border-radius: 8px;
   border: 1px solid #26263a;
 }
+.gallery-grid img,
+.carousel img {
+  background: #111;
+  padding: 6px;
+  border-radius: 10px;
+}
 
 /* Back button */
 .back-btn {
