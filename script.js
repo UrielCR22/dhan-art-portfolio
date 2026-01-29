@@ -193,30 +193,31 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 // ===============================
 // Stable submenu behavior (desktop + mobile)
 document.querySelectorAll('.has-submenu').forEach(item => {
-  let hoverTimer;
 
-  // Desktop: keep open while hovering parent or submenu
+  // Desktop hover
   item.addEventListener('mouseenter', () => {
-    clearTimeout(hoverTimer);
-    item.classList.add('open');
-  });
-  item.addEventListener('mouseleave', () => {
-    hoverTimer = setTimeout(() => item.classList.remove('open'), 80);
-  });
-
-  // Mobile: toggle on click of the parent link
-  item.addEventListener('click', (e) => {
-    const isMobileNav = siteNav.classList.contains('open');
-  
-    if (!isMobileNav) return;
-  
-    // Solo si se tocó el link principal (Galleryy)
-    if (e.target.closest(':scope > a')) {
-      e.preventDefault();
-      item.classList.toggle('open');
+    if (!siteNav.classList.contains('open')) {
+      item.classList.add('open');
     }
   });
 
+  item.addEventListener('mouseleave', () => {
+    if (!siteNav.classList.contains('open')) {
+      item.classList.remove('open');
+    }
+  });
+
+});
+
+// Mobile toggle (Gallery button)
+document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+  toggle.addEventListener('click', (e) => {
+    const isMobile = siteNav.classList.contains('open');
+    if (!isMobile) return;
+
+    const item = toggle.closest('.has-submenu');
+    item.classList.toggle('open');
+  });
 });
 
 // ===============================
