@@ -264,10 +264,12 @@ a:hover { color: var(--accent-2); }
 .modal-content {
   margin: auto;
   display: block;
-  max-width: 97%;
-  max-height: 97vh;
-  border-radius: 8px;
+  max-width: 92%;
+  max-height: 92vh;
+  border-radius: 10px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
 }
+
 
 .close {
   position: absolute;
